@@ -56,3 +56,7 @@ func TestShow渲染网页(t *testing.T) {
 	}
 	w3mdebugzh.Show渲染网页(tab.Gen网页表格())
 }
+
+func TestShow标题内容(t *testing.T) {
+	w3mdebugzh.Show标题内容("标题", "内容")
+}

@@ -4,10 +4,12 @@ go 1.22.8
 
 require (
 	github.com/brianvoe/gofakeit/v7 v7.2.1
-	github.com/go-xlan/go-webpage v0.0.5
+	github.com/go-xlan/go-webpage v0.0.6
+	github.com/yyle88/eroticgo v0.0.3
 	github.com/yyle88/must v0.0.21
 	github.com/yyle88/osexec v0.0.27
 	github.com/yyle88/tern v0.0.7
+	github.com/yyle88/zaplog v0.0.22
 )
 
 require (
@@ -35,14 +37,12 @@ require (
 	github.com/ugorji/go/codec v1.2.12 // indirect
 	github.com/yyle88/done v1.0.25 // indirect
 	github.com/yyle88/erero v1.0.20 // indirect
-	github.com/yyle88/eroticgo v0.0.3 // indirect
 	github.com/yyle88/mutexmap v1.0.13 // indirect
 	github.com/yyle88/printgo v1.0.5 // indirect
 	github.com/yyle88/rese v0.0.10 // indirect
 	github.com/yyle88/sure v0.0.38 // indirect
 	github.com/yyle88/syncmap v1.0.16 // indirect
 	github.com/yyle88/syntaxgo v0.0.48 // indirect
-	github.com/yyle88/zaplog v0.0.22 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
 	golang.org/x/arch v0.8.0 // indirect
