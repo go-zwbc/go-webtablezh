@@ -22,7 +22,7 @@ func NewC表格单列(name单列列名 string) *C表格单列 {
 	}
 }
 
-func (c *C表格单列) V值(v string) *C表格单列 {
+func (c *C表格单列) V(v string) *C表格单列 {
 	c.vs单列内容 = append(c.vs单列内容, v)
 	return c
 }
@@ -35,18 +35,22 @@ func (c *C表格单列) D样() *E样式和格 {
 	return NewE样式和格(c.td单元格式, c)
 }
 
+func (c *C表格单列) V值(v string) *C表格单列 {
+	return c.V(v)
+}
+
 func (c *C表格单列) V整数(v int) *C表格单列 {
-	return c.V值(fmt.Sprintf("%d", v))
+	return c.V(fmt.Sprintf("%d", v))
 }
 
 func (c *C表格单列) V两位小数(v float64) *C表格单列 {
-	return c.V值(fmt.Sprintf("%.2f", v))
+	return c.V(fmt.Sprintf("%.2f", v))
 }
 
 func (c *C表格单列) V三位小数(v float64) *C表格单列 {
-	return c.V值(fmt.Sprintf("%.3f", v))
+	return c.V(fmt.Sprintf("%.3f", v))
 }
 
 func (c *C表格单列) V错误(e error) *C表格单列 {
-	return c.V值(tern.BF(e != nil, func() string { return e.Error() }))
+	return c.V(tern.BF(e != nil, func() string { return e.Error() }))
 }
