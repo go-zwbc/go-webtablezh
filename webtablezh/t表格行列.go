@@ -15,13 +15,9 @@ func (cs T表格行列) Gen网页表格() string {
 	}
 	var th表头内容 = "<tr>" + strings.Join(th表头列表, "") + "</tr>"
 
-	var sz首列高度 = tern.BF(len(cs) > 0, func() int { return len(cs[0].vs单列内容) })
-	for _, c单列 := range cs {
-		for idx := len(c单列.vs单列内容); idx < sz首列高度; idx++ {
-			c单列.V值("") //补个空白就行
-		}
-	}
+	cs.Set补齐各列()
 
+	var sz首列高度 = tern.BF(len(cs) > 0, func() int { return len(cs[0].vs单列内容) })
 	var td各行内容 = make([]string, 0, sz首列高度)
 	for idx := 0; idx < sz首列高度; idx++ {
 		td单行的值 := make([]string, 0, len(cs))
@@ -34,6 +30,18 @@ func (cs T表格行列) Gen网页表格() string {
 	}
 
 	return `<table border="1">` + th表头内容 + strings.Join(td各行内容, "") + `</table>`
+}
+
+func (cs T表格行列) Set补齐各列() {
+	var sz最大高度 int
+	for _, c单列 := range cs {
+		sz最大高度 = max(sz最大高度, len(c单列.vs单列内容))
+	}
+	for _, c单列 := range cs {
+		for idx := len(c单列.vs单列内容); idx < sz最大高度; idx++ {
+			c单列.V值("") //补个空白就行
+		}
+	}
 }
 
 func (c *C表格单列) new表头字符串TH() string {
