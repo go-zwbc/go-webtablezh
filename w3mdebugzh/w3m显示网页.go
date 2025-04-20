@@ -5,10 +5,10 @@ import (
 	"github.com/yyle88/osexec"
 )
 
-func Open打开链接(cmd命令配置 *osexec.OsCommand, link链接 string) {
-	w3mopenpage.Open(cmd命令配置, link链接)
+func Open打开链接(link链接 string) {
+	w3mopenpage.Open(osexec.NewOsCommand().WithDebug(), link链接)
 }
 
-func Show渲染网页(cmd命令配置 *osexec.OsCommand, page网页 string) {
-	w3mopenpage.Show(cmd命令配置, page网页)
+func Show渲染网页(page网页 string) {
+	w3mopenpage.Show(osexec.NewOsCommand().WithDebug(), page网页)
 }

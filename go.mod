@@ -6,7 +6,7 @@ require (
 	github.com/brianvoe/gofakeit/v7 v7.2.1
 	github.com/go-xlan/go-webpage v0.0.5
 	github.com/yyle88/must v0.0.21
-	github.com/yyle88/osexec v0.0.26
+	github.com/yyle88/osexec v0.0.27
 	github.com/yyle88/tern v0.0.7
 )
 

@@ -8,7 +8,6 @@ import (
 	"github.com/go-zwbc/go-webtablezh/w3mdebugzh"
 	"github.com/go-zwbc/go-webtablezh/webtablezh"
 	"github.com/yyle88/must"
-	"github.com/yyle88/osexec"
 )
 
 type Task struct {
@@ -55,5 +54,5 @@ func TestShow渲染网页(t *testing.T) {
 		D截止日期.V值(row.D截止日期.Format(time.RFC3339))
 		C创建时间.V值(row.C创建时间.Format(time.RFC3339))
 	}
-	w3mdebugzh.Show渲染网页(osexec.NewOsCommand().WithDebug(), tab.Gen网页表格())
+	w3mdebugzh.Show渲染网页(tab.Gen网页表格())
 }
